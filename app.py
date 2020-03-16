@@ -4,7 +4,7 @@ import requests, os
 
 app = Flask(__name__, static_folder = 'Resources', template_folder ='templates')
 @app.route("/")
-@app.route("/home")
+@app.route("/index.html")
 def index():
     return render_template("index.html", text = 'Sneaker Head Home')
 
@@ -40,7 +40,7 @@ def california():
 def comparison():
     return render_template("comparison.html", text = 'Compare visualizations')
 
-@app.route("/data.html")
+@app.route("/StockX-Data-2019.html")
 def data():
     return render_template("StockX-Data-2019.html", text = 'See all data')
 
